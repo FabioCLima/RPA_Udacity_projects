@@ -3713,9 +3713,9 @@
     "restore": {
       "projectUniqueName": "Invoice Scraping",
       "projectName": "Invoice Scraping",
-      "projectPath": "C:\\Users\\FLI028\\Desktop\\RPA_projects\\UDACITY_Projects\\Invoice Scraping Project\\.local",
+      "projectPath": "C:\\Users\\FLI028\\Desktop\\RPA_Udacity_projects\\UDACITY_Projects\\Invoice Scraping Project\\.local",
       "packagesPath": "C:\\Users\\FLI028\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FLI028\\Desktop\\RPA_projects\\UDACITY_Projects\\Invoice Scraping Project\\.local"
+      "outputPath": "C:\\Users\\FLI028\\Desktop\\RPA_Udacity_projects\\UDACITY_Projects\\Invoice Scraping Project\\.local"
     },
     "frameworks": {
       "net461": {
