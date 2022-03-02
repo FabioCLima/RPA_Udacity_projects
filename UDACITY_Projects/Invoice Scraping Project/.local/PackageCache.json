@@ -52,25 +52,6 @@
     },
     {
       "Package": {
-        "Id": "UiPath.PDF.Activities",
-        "Version": "3.4.1"
-      },
-      "Assemblies": [
-        "C:\\Users\\FLI028\\.nuget\\packages\\bitmiracle.docotic.pdf/7.5.11645\\lib/net46/BitMiracle.Docotic.Pdf.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\system.threading.tasks.dataflow/5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.contracts/2.9.1\\lib/net461/UiPath.OCR.Contracts.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities/3.4.1\\lib/net461/UiPath.PDF.Activities.Design.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities/3.4.1\\lib/net461/UiPath.PDF.Activities.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities/3.4.1\\lib/net461/UiPath.PDF.Telemetry.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities/3.4.1\\lib/net461/UiPath.PDF.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.telemetry.client/1.5.3\\lib/net461/TelemetryClient.dll"
-      ],
-      "Path": "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities\\3.4.1"
-    },
-    {
-      "Package": {
         "Id": "UiPath.System.Activities",
         "Version": "20.10.4"
       },
@@ -146,15 +127,15 @@
         "C:\\Users\\FLI028\\.nuget\\packages\\nlog/4.5.11\\lib/net45/NLog.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\system.collections.immutable/1.5.0\\lib/netstandard2.0/System.Collections.Immutable.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\system.io.abstractions/3.0.10\\lib/net40/System.IO.Abstractions.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\system.threading.tasks.dataflow/5.0.0\\lib/net461/System.Threading.Tasks.Dataflow.dll",
+        "C:\\Users\\FLI028\\.nuget\\packages\\system.threading.tasks.dataflow/4.10.0\\lib/netstandard2.0/System.Threading.Tasks.Dataflow.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\uipath/20.10.7641.24102\\lib/UiPath.Interop.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.activities/2.4.1\\lib/net461/UiPath.OCR.Activities.Design.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.activities/2.4.1\\lib/net461/UiPath.OCR.Activities.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.activities/2.4.1\\lib/net461/UiPath.OCR.Core.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.contracts/2.9.1\\lib/net461/UiPath.OCR.Contracts.dll",
+        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.contracts/2.7.1\\lib/net461/UiPath.OCR.Contracts.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\uipath.platform/20.10.4\\lib/net461/UiPath.Platform.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.telemetry.client/1.5.3\\lib/net461/TelemetryClient.dll",
+        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.telemetry.client/1.2.20\\lib/net461/TelemetryClient.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\uipath.uiautomation.activities/20.10.9\\lib/net461/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\uipath.uiautomation.activities/20.10.9\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
         "C:\\Users\\FLI028\\.nuget\\packages\\uipath.uiautomation.activities/20.10.9\\lib/net461/ActiproSoftware.Editors.Wpf.dll",
@@ -221,11 +202,6 @@
     "AvalonEdit": {
       "Id": "AvalonEdit",
       "Version": "5.0.3",
-      "Dependencies": []
-    },
-    "BitMiracle.Docotic.Pdf": {
-      "Id": "BitMiracle.Docotic.Pdf",
-      "Version": "7.5.11645",
       "Dependencies": []
     },
     "BouncyCastle": {
@@ -788,7 +764,7 @@
     },
     "System.Threading.Tasks.Dataflow": {
       "Id": "System.Threading.Tasks.Dataflow",
-      "Version": "5.0.0",
+      "Version": "4.10.0",
       "Dependencies": []
     },
     "System.Threading.Tasks.Extensions": {
@@ -923,26 +899,8 @@
     },
     "UiPath.OCR.Contracts": {
       "Id": "UiPath.OCR.Contracts",
-      "Version": "2.9.1",
+      "Version": "2.7.1",
       "Dependencies": []
-    },
-    "UiPath.PDF.Activities": {
-      "Id": "UiPath.PDF.Activities",
-      "Version": "3.4.1",
-      "Dependencies": [
-        {
-          "Item1": "UiPath.OCR.Contracts",
-          "Item2": "[2.9.1, )"
-        },
-        {
-          "Item1": "UiPath.Telemetry.Client",
-          "Item2": "[1.5.3, )"
-        },
-        {
-          "Item1": "BitMiracle.Docotic.Pdf",
-          "Item2": "[7.5.11645, )"
-        }
-      ]
     },
     "UiPath.Platform": {
       "Id": "UiPath.Platform",
@@ -1022,19 +980,15 @@
     },
     "UiPath.Telemetry.Client": {
       "Id": "UiPath.Telemetry.Client",
-      "Version": "1.5.3",
+      "Version": "1.2.20",
       "Dependencies": [
         {
           "Item1": "Newtonsoft.Json",
-          "Item2": "[11.0.2, )"
+          "Item2": "[11.0.1, )"
         },
         {
           "Item1": "System.Threading.Tasks.Dataflow",
-          "Item2": "[5.0.0, )"
-        },
-        {
-          "Item1": "System.ValueTuple",
-          "Item2": "[4.5.0, )"
+          "Item2": "[4.10.0, )"
         }
       ]
     },
@@ -1139,16 +1093,6 @@
         "C:\\Users\\FLI028\\.nuget\\packages\\avalonedit\\5.0.3\\lib\\Net40\\ICSharpCode.AvalonEdit.dll"
       ],
       "Path": "C:\\Users\\FLI028\\.nuget\\packages\\avalonedit\\5.0.3"
-    },
-    {
-      "Package": {
-        "Id": "BitMiracle.Docotic.Pdf",
-        "Version": "7.5.11645"
-      },
-      "Assemblies": [
-        "C:\\Users\\FLI028\\.nuget\\packages\\bitmiracle.docotic.pdf\\7.5.11645\\lib\\net46\\BitMiracle.Docotic.Pdf.dll"
-      ],
-      "Path": "C:\\Users\\FLI028\\.nuget\\packages\\bitmiracle.docotic.pdf\\7.5.11645"
     },
     {
       "Package": {
@@ -1673,12 +1617,12 @@
     {
       "Package": {
         "Id": "System.Threading.Tasks.Dataflow",
-        "Version": "5.0.0"
+        "Version": "4.10.0"
       },
       "Assemblies": [
-        "C:\\Users\\FLI028\\.nuget\\packages\\system.threading.tasks.dataflow\\5.0.0\\lib\\net461\\System.Threading.Tasks.Dataflow.dll"
+        "C:\\Users\\FLI028\\.nuget\\packages\\system.threading.tasks.dataflow\\4.10.0\\lib\\netstandard2.0\\System.Threading.Tasks.Dataflow.dll"
       ],
-      "Path": "C:\\Users\\FLI028\\.nuget\\packages\\system.threading.tasks.dataflow\\5.0.0"
+      "Path": "C:\\Users\\FLI028\\.nuget\\packages\\system.threading.tasks.dataflow\\4.10.0"
     },
     {
       "Package": {
@@ -1751,25 +1695,12 @@
     {
       "Package": {
         "Id": "UiPath.OCR.Contracts",
-        "Version": "2.9.1"
+        "Version": "2.7.1"
       },
       "Assemblies": [
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.contracts\\2.9.1\\lib\\net461\\UiPath.OCR.Contracts.dll"
+        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.contracts\\2.7.1\\lib\\net461\\UiPath.OCR.Contracts.dll"
       ],
-      "Path": "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.contracts\\2.9.1"
-    },
-    {
-      "Package": {
-        "Id": "UiPath.PDF.Activities",
-        "Version": "3.4.1"
-      },
-      "Assemblies": [
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities\\3.4.1\\lib\\net461\\UiPath.PDF.Activities.Design.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities\\3.4.1\\lib\\net461\\UiPath.PDF.Activities.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities\\3.4.1\\lib\\net461\\UiPath.PDF.Telemetry.dll",
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities\\3.4.1\\lib\\net461\\UiPath.PDF.dll"
-      ],
-      "Path": "C:\\Users\\FLI028\\.nuget\\packages\\uipath.pdf.activities\\3.4.1"
+      "Path": "C:\\Users\\FLI028\\.nuget\\packages\\uipath.ocr.contracts\\2.7.1"
     },
     {
       "Package": {
@@ -1806,12 +1737,12 @@
     {
       "Package": {
         "Id": "UiPath.Telemetry.Client",
-        "Version": "1.5.3"
+        "Version": "1.2.20"
       },
       "Assemblies": [
-        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.telemetry.client\\1.5.3\\lib\\net461\\TelemetryClient.dll"
+        "C:\\Users\\FLI028\\.nuget\\packages\\uipath.telemetry.client\\1.2.20\\lib\\net461\\TelemetryClient.dll"
       ],
-      "Path": "C:\\Users\\FLI028\\.nuget\\packages\\uipath.telemetry.client\\1.5.3"
+      "Path": "C:\\Users\\FLI028\\.nuget\\packages\\uipath.telemetry.client\\1.2.20"
     },
     {
       "Package": {
