@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1586.4,911.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1196,1082.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -84,7 +84,7 @@
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="1 - read the last unread emails from your &quot;outlook&quot; mail box&#xA;&#xA;2- Download all the attachments with a naming convention of &#xA;&quot;CustomerName_InvoiceDate_InvoiceNumber.pdf&quot;&#xA;3 - Save the attachment files in the data folder which has already been created or create in the project directory.&#xA;" DisplayName="Project Steps" sap:VirtualizedContainerService.HintSize="375.2,846.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap2010:Annotation.AnnotationText="1 - read the last unread emails from your &quot;outlook&quot; mail box&#xA;&#xA;2- Download all the attachments with a naming convention of &#xA;&quot;CustomerName_InvoiceDate_InvoiceNumber.pdf&quot;&#xA;3 - Save the attachment files in the data folder which has already been created or create in the project directory.&#xA;" DisplayName="Project Steps" sap:VirtualizedContainerService.HintSize="476.8,1017.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="fabio.lima@wartsila.com" Name="mail_account" />
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="unread_emails" />
@@ -114,7 +114,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="In this workflow the robot will get the unread emails from the outlook mail box. Download all the attachments from the mail box, if the mail has the subject &quot;Techno Computers&quot;" DisplayName="Invoke the project steps 1, 2 and 3" sap:VirtualizedContainerService.HintSize="333.6,189.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="workflow1.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="In this workflow the robot will get the unread emails from the outlook mail box. Download all the attachments from the mail box, if the mail has the subject &quot;Techno Computers&quot;" DisplayName="Invoke the project steps 1, 2 and 3" sap:VirtualizedContainerService.HintSize="435.2,189.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="workflow1.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InOutArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="unread_emails">[unread_emails]</InOutArgument>
         <InOutArgument x:TypeArguments="x:Boolean" x:Key="isdatafolder_exists">[isdatafolder_exists]</InOutArgument>
@@ -128,68 +128,43 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ScrapingData workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ScrapingData.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke ScrapingData workflow" sap:VirtualizedContainerService.HintSize="435.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="ScrapingData.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sc:IEnumerable" x:Key="files_attached">
-          <mva:VisualBasicValue x:TypeArguments="sc:IEnumerable" ExpressionText="files_attached" />
-        </InArgument>
-        <InOutArgument x:TypeArguments="x:Int32" x:Key="idxNo">
-          <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="idxNo" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:Int32" x:Key="pagecount">
-          <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="pagecount" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="pdf_output">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="pdf_output" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="scg:IEnumerable(str:Match)" x:Key="invoices_no">
-          <mva:VisualBasicReference x:TypeArguments="scg:IEnumerable(str:Match)" ExpressionText="invoices_no" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="scg:IEnumerable(str:Match)" x:Key="invoice_date">
-          <mva:VisualBasicReference x:TypeArguments="scg:IEnumerable(str:Match)" ExpressionText="invoice_date" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="customer">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="customer" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="excel_file">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="excel_file" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="InvoiceNo">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="InvoiceNo" />
-        </InOutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="data_folder_path">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="data_folder_path" />
-        </InArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="InvoiceDate">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="InvoiceDate" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="sub_total">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="sub_total" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="gst_8">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="gst_8" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="strTotal">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="strTotal" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="invoice_dt">
-          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="invoice_dt" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="invoice_dt2">
-          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="invoice_dt2" />
-        </InOutArgument>
+        <InArgument x:TypeArguments="sc:IEnumerable" x:Key="files_attached">[files_attached]</InArgument>
+        <InOutArgument x:TypeArguments="x:Int32" x:Key="idxNo">[idxNo]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:Int32" x:Key="pagecount">[pagecount]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="pdf_output">[pdf_output]</InOutArgument>
+        <InOutArgument x:TypeArguments="scg:IEnumerable(str:Match)" x:Key="invoices_no">[invoices_no]</InOutArgument>
+        <InOutArgument x:TypeArguments="scg:IEnumerable(str:Match)" x:Key="invoice_date">[invoice_date]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="customer">[customer]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="excel_file">[excel_file]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="InvoiceNo">[InvoiceNo]</InOutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="data_folder_path">[data_folder_path]</InArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="InvoiceDate">[InvoiceDate]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="sub_total">[sub_total]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="gst_8">[gst_8]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="strTotal">[strTotal]</InOutArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="invoice_dt">[invoice_dt]</InOutArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="invoice_dt2">[invoice_dt2]</InOutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Project steps 1, 2, 3, 4 and 5 are completed&quot;]" />
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SendingEmails workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SendingEmails.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="mail_account">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="mail_account" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="data_folder_path">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="data_folder_path" />
-        </InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="435.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Project steps 1, 2, 3, 4 and 5 are completed&quot;]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="435.2,284.8" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,206.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SendingEmails workflow" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SendingEmails.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="mail_account">[mail_account]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="data_folder_path">[data_folder_path]</InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
   </Sequence>
 </Activity>

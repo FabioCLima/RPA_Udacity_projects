@@ -6,10 +6,10 @@
     <x:Property Name="in_data_folder_path" Type="InArgument(x:String)" />
     <x:Property Name="in_subject" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1586.4,2510.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1196,2554.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="32">
+    <scg:List x:TypeArguments="x:String" Capacity="28">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System</x:String>
@@ -41,7 +41,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="32">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="31">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -75,7 +75,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Workflow 1 - step1, step 2 and step3" sap:VirtualizedContainerService.HintSize="928,2445.6" sap2010:WorkflowViewState.IdRef="Sequence_89">
+  <Sequence DisplayName="Workflow 1 - step1, step 2 and step3" sap:VirtualizedContainerService.HintSize="928,2489.6" sap2010:WorkflowViewState.IdRef="Sequence_89">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -90,7 +90,8 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:GetOutlookMailMessages TimeoutMS="{x:Null}" Account="[in_mail_account]" DisplayName="Get unread mails" Filter="[Subject] = 'Techno Computers'" GetAttachements="False" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[unread_emails]" OnlyUnreadMessages="True" Top="30" />
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="The robot will download all the attachments with a naming convention as per project specification." DisplayName="Step 2" sap:VirtualizedContainerService.HintSize="886.4,419.2" sap2010:WorkflowViewState.IdRef="Sequence_88">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="886.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Step 1 of the automation finished - get the emails&quot;]" />
+    <Sequence sap2010:Annotation.AnnotationText="The robot will download all the attachments with a naming convention as per project specification." DisplayName="Step 2" sap:VirtualizedContainerService.HintSize="886.4,463.2" sap2010:WorkflowViewState.IdRef="Sequence_88">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Default="C:\Users\FLI028\Desktop\RPA_projects\Invoice Scraping\Invoices" Name="attachments_folder" />
       </Sequence.Variables>
@@ -100,7 +101,7 @@
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="368.8,282.4" sap2010:WorkflowViewState.IdRef="ForEach`1_20" Values="[unread_emails]">
+      <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="data_folder variable - folder in the project directory it will hold all the pdf download as per  project convention" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="368.8,326.4" sap2010:WorkflowViewState.IdRef="ForEach`1_20" Values="[unread_emails]">
         <ui:ForEach.Body>
           <ActivityAction x:TypeArguments="snm:MailMessage">
             <ActivityAction.Argument>
@@ -115,16 +116,29 @@
             </ui:SaveMailAttachments>
           </ActivityAction>
         </ui:ForEach.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
       </ui:ForEach>
     </Sequence>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="886.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Step 2 of the automation finished - download all the attachments with naming convention&quot;]" />
     <Sequence sap2010:Annotation.AnnotationText="Program a Robot to save the attachment files in the data folder which has already been created or create it in the Project directory.&#xA;&#xA;ps : In the step before we already create the &quot;data folder&quot;, if not the robot will do it." DisplayName="Step 3 - check if the data folder exists" sap:VirtualizedContainerService.HintSize="886.4,1296" sap2010:WorkflowViewState.IdRef="Sequence_93">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:String" Name="data_path">
+          <Variable.Default>
+            <Literal x:TypeArguments="x:String">C:\Users\FLI028\Desktop\RPA_Udacity_projects\UDACITY_Projects\Invoice Scraping Project\data_folder</Literal>
+          </Variable.Default>
+        </Variable>
+      </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:PathExists DisplayName="Path Exists" Exists="[isdatafolder_exists]" sap:VirtualizedContainerService.HintSize="844.8,90.4" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="C:\Users\FLI028\Desktop\RPA_Udacity_projects\UDACITY_Projects\Invoice Scraping Project\data_folder" PathType="Folder" />
+      <ui:PathExists DisplayName="Path Exists" Exists="[isdatafolder_exists]" sap:VirtualizedContainerService.HintSize="844.8,90.4" sap2010:WorkflowViewState.IdRef="PathExists_4" Path="[data_path]" PathType="Folder" />
       <If sap2010:Annotation.AnnotationText="If the data folder exist,&#xA;THEN: move the File to there.&#xA;ELSE: create the Year folder and move the File to the Year folder recently created" Condition="[isdatafolder_exists]" DisplayName="If - check if  data folder already has created or create it" sap:VirtualizedContainerService.HintSize="844.8,1012.8" sap2010:WorkflowViewState.IdRef="If_10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -145,6 +159,11 @@
           <Sequence sap:VirtualizedContainerService.HintSize="425.6,803.2" sap2010:WorkflowViewState.IdRef="Sequence_92">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:String[]" Name="aux_var" />
+              <Variable x:TypeArguments="x:String" Name="project_path">
+                <Variable.Default>
+                  <Literal x:TypeArguments="x:String">C:\Users\FLI028\Desktop\RPA_projects\Invoice Scraping</Literal>
+                </Variable.Default>
+              </Variable>
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -177,13 +196,11 @@
                 </ActivityAction>
               </ui:ForEach.Body>
             </ui:ForEach>
-            <ui:MoveFile ContinueOnError="{x:Null}" Destination="C:\Users\FLI028\Desktop\RPA_projects\Invoice Scraping\data_folder" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,160" sap2010:WorkflowViewState.IdRef="MoveFile_4" Overwrite="True" Path="C:\Users\FLI028\Desktop\RPA_projects\Invoice Scraping" />
+            <ui:MoveFile ContinueOnError="{x:Null}" Destination="[data_path]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="384,160" sap2010:WorkflowViewState.IdRef="MoveFile_4" Overwrite="True" Path="[project_path]" />
           </Sequence>
         </If.Else>
       </If>
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="886.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Step 1 of the automation finished - get the emails&quot;]" />
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="886.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Step 2 of the automation finished - download all the attachments with naming convention&quot;]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="886.4,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Step 3 - All the attached files have been saved into the Data folder in project directory&quot;]" />
   </Sequence>
 </Activity>
